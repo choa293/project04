@@ -1,0 +1,28 @@
+body{
+
+  font-family:helvetica-bold;
+
+}
+
+.textinput input[type=text] {
+  padding: 9px;
+  margin-top: 150px;
+  border: none;
+  font-size: 30px;
+  
+}
+  .textinput input[type=text] {
+    border: 1px solid black;  
+}
+
+button{
+	text-decoration:none;
+	border:1px solid black;
+	background-color:transparent;
+	margin-top:300px;
+	margin-left:50px;
+	padding:10px;
+	font-size:15px;
+	left:500px;
+	position:relative;
+}
