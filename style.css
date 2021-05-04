@@ -19,10 +19,85 @@ button{
 	text-decoration:none;
 	border:1px solid black;
 	background-color:transparent;
-	margin-top:300px;
 	margin-left:50px;
 	padding:10px;
 	font-size:15px;
+	top:100px;
 	left:500px;
 	position:relative;
+
 }
+
+#resultbox {
+	margin-top:40px;
+	font-size:150px;
+}
+
+#slider{
+	display:none;
+	position:relative;
+	top:190px;
+	left:70px;
+}
+
+/*path {
+  fill: transparent;
+}*/
+
+.container {
+  /*centers in the container*/
+  text-align: center;
+}
+
+div.circTxt {
+  /*allows for centering*/
+  display: inline-block;
+  /*adjust as needed*/
+  margin-bottom: 128px;
+  color: whitesmoke;
+}
+
+#shadow {
+  font-size:28px;
+  font-weight:bold;
+  text-shadow:0 4px 8px #666, 0 6px 16px #999;
+}
+
+#color{
+  display:none;
+}
+
+fieldset{
+  border: none;
+  text-decoration:none;
+  top:0px;
+}
+
+output{
+  display: inline-block;
+  min-width: 2.5em;
+}
+label, output{
+  padding: 2px 9px;
+  border-radius: 3px;
+  font-family: 'helvetica', sans-serif;
+  color: #000;
+  font-size: 1.1em;
+}
+label[for=r], output[for=r]{
+  background-color: #f00;
+}
+label[for=g], output[for=g]{
+  background-color: #0f0;
+}
+label[for=b], output[for=b]{
+  background-color: #00f;
+}
+#hex{
+  min-width: 4.5em;
+  font-size: 2em;
+  left:50px;
+  background: rgba(255,255,255,.3);
+  position:absolute;
+}
+
