@@ -78,9 +78,9 @@ button{
 
 #slider{
 	display:none;
-	position:relative;
-	top:190px;
-	left:70px;
+	position:absolute;
+	top:760px;
+	left:760px;
 }
 
 path {
