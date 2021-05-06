@@ -1,8 +1,8 @@
 
 
- var myArray = ['#FFE895', '#82C0FA', '#FFB1F7', '#B0FB95'];
- var rand = myArray[Math.floor(Math.random() * myArray.length)];
- document.body.style.backgroundColor = rand;
+var myArray = ['#FFE895', '#82C0FA', '#FFB1F7', '#B0FB95'];
+var rand = myArray[Math.floor(Math.random() * myArray.length)];
+document.body.style.backgroundColor = rand;
 
 document.getElementById('input').addEventListener('input', (event) => {
 document.getElementById('resultbox').textContent = event.target.value;
@@ -23,7 +23,6 @@ function changeKerning() {
   kerning++ 
   document.getElementById("resultbox").style.letterSpacing = kerning + "px";
 }
-
 
 
 function toggleFontSize() {
@@ -106,73 +105,61 @@ b.addEventListener('input', function() {
 }, false);
 
 
+function toggleFonts1() {
+  var font1 = document.getElementById("font1");
+  if (font1.style.display === "none") {
+    font1.style.display = "block";
+  } else {
+   font1.style.display = "none";
+  }
+}
+
+function toggleFonts2() {
+  var font2 = document.getElementById("font2");
+  if (font2.style.display === "none") {
+    font2.style.display = "block";
+  } else {
+   font2.style.display = "none";
+  }
+}
+
+function toggleFonts3() {
+  var font3 = document.getElementById("font3");
+  if (font3.style.display === "none") {
+    font3.style.display = "block";
+  } else {
+   font3.style.display = "none";
+  }
+}
+
+function toggleFonts(){
+
+  toggleFonts1()
+  toggleFonts2()
+  toggleFonts3()
+}
+
+function changeFonts1() {
+  document.getElementById("resultbox").style.fontFamily = "times-bold";
+}
+
+function changeFonts2() {
+  document.getElementById("resultbox").style.fontFamily = "futura";
+}
+
+function changeFonts3() {
+  document.getElementById("resultbox").style.fontFamily = "helvetica-bold";
+}
+
+
 function saveText(){
 html2canvas(document.getElementById('resultbox')).then(function(canvas){
 	document.body.appendChild(canvas)
-  // alert("Hi! You can save the text to your computer by right clicking on the texts that show up on the bottom or feel free to screenshot anything you create!");
-
 })
 }
 
-// function notify(){ 
-//   alert("Hello! I am an alert box!");
-// }
 
-
-// const download = document.getElementById('save');
-
-// download.addEventListener('click', function(e) {
-
-//   var link = document.createElement('a');
-//   link.download = 'text.png';
-//   link.href = canvas.toDataURL()
-//   link.click();
-//   link.delete; 
-
-// });
-
-
-// var node = document.getElementById('resultbox');
-// var btn = document.getElementById('save');
-
-// btn.onclick = function() {
-
-//   domtoimage.toBlob(document.getElementById('resultbox'))
-//     .then(function(blob) {
-//       window.saveAs(blob, 'saveText.png');
-//     });
-// }
-
-// const myCanvas = document.querySelector("#myCanvas");
-// const saveText = document.querySelector("#save");
-
-// saveText.addEventListener("click",function(){
-
-// 	if(window.navigator.msSaveBlob){
-// 		window.navigator.msSaveBlob(myCanvas.msToBlob() , "canvas-image.png")
-// 	} else{
-// 		 const a = document.createElement("a"); 
-
-// 		 document.body.appendChild(a);
-// 		 const dataURI = myCanvas.toDataURL()
-// 		 a.href = myCanvas.toDataURL();
-// 		 a.download =  "canvas-image.png"; 
-// 		 a.click();
-// 		 document.body.removeChild(a);
-// 	}
-// });
-
-// function reset(){
-//     document.getElementById("input").removeAttribute('style')
-//   }
-
-
-
-
-
-
-//   // detect when pressing a key 
-//   // grab value of input and set it equal to set the text into the result box 
-
- 
+function removeEdits() {
+ location.reload();
+}
 

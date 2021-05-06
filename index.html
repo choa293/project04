@@ -15,66 +15,62 @@
   <body> 
 
 <div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.opacity='0%';">&times;</span> 
- hello! <br>You can save the text you create <br> to your computer by right clicking <br> on the texts that appear on the bottom <br> OR feel free to screenshot <br> anything you like!
+
+        <span class="closebtn" onclick="this.parentElement.style.opacity='0%';">&times;</span> 
+        hello! <br>You can save the text you create <br> to your computer by right clicking <br> on the texts that appear on the bottom <br> OR feel free to screenshot <br> anything you like!
+        
 </div>
 
-<center>
+ <div id="color">
 
-<div class="textinput" >
-  <input id="input" type="text" placeholder="Type Here">
-</div>
+        <fieldset >
+          <label for="r">R</label>
+          <input type="range" min="0" max="255" id="r" step="1" value="0">
+          <output for="r" id="r_out">0</output>
+        </fieldset>  
 
+        <fieldset>
+          <label for="g">G</label>
+          <input type="range" min="0" max="255" id="g" step="1" value="0">
+          <output for="g" id="g_out">0</output>
+        </fieldset>
 
-<div class="resultandedit">
+        <fieldset>
+          <label for="b">B</label>
+          <input type="range" min="0" max="255" id="b" step="1" value="0">
+          <output for="b" id="b_out">0</output>
+        </fieldset>  
+
+        <output id="hex">#000000</output>
+
+    </div>
+
+    <div class="textinput">
+
+        <input id="input" type="text" placeholder="Type Here"> 
+
+    </div>
+
+    <button type="button" onclick="removeEdits()" id="reset">reset</button>
 
     <div id="resultbox"> </div>
 
-    <button type="button"onclick="changeKerning()" id="kerning"> kerning </button>
+<div id="allbuttons">
 
-    <button type="button"onclick="toggleShadow()">shadow</button>
-
-    <!-- <div id="slider-range-max"></div> -->
-
-    <button type="button"onclick="toggleFontSize()"> font size </button>
-    <button type="button"onclick="toggleColor()">color</button>
-
-    <button type="button"onclick=""> circle </button> 
-
-    <button type="button" id ="download" onclick="saveText()"> save</button>
+        <button type="button"onclick="changeKerning()" id="kerning"> kerning </button>
+        <button type="button"onclick="toggleShadow()">shadow</button>
+        <button type="button"onclick="toggleFontSize()"> font size </button>
+        <button type="button"onclick="toggleColor()">color</button>
+        <button type="button"onclick="toggleFonts()"> typeface </button> 
+        <button type="button" id ="download" onclick="saveText()"> save</button>
 
 </div>
 
-</center>
+    <button type="button" onclick="changeFonts1()" id ="font1"> Times Bold </button>
+    <button type="button" onclick="changeFonts2()" id ="font2"> Futura </button>
+    <button type="button" onclick="changeFonts3()" id ="font3"> Helvetica Bold </button>
 
-<!-- <button type="button" onclick="reset()" id="reset"> reset </button>
- -->
-<div id="color">
-    <fieldset >
-      <label for="r">R</label>
-      <input type="range" min="0" max="255" id="r" step="1" value="0">
-      <output for="r" id="r_out">0</output>
-    </fieldset>  
-
-    <fieldset>
-      <label for="g">G</label>
-      <input type="range" min="0" max="255" id="g" step="1" value="0">
-      <output for="g" id="g_out">0</output>
-    </fieldset>
-
-    <fieldset>
-      <label for="b">B</label>
-      <input type="range" min="0" max="255" id="b" step="1" value="0">
-      <output for="b" id="b_out">0</output>
-    </fieldset>  
-
-    <output id="hex">#000000</output>
-
-</div>
-
-
-<input type="range" value="150" min="10" max="150" step=".0002" id="slider" />
-
+    <input type="range" value="150" min="10" max="150" step=".0002" id="slider" />
 
   </body>
 </html> 
