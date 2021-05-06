@@ -17,9 +17,14 @@ function toggleShadow() {
   }
 }
 
+let kerning = 0;
+
 function changeKerning() {
-  document.getElementById("resultbox").style.letterSpacing = "10px";
+  kerning++ 
+  document.getElementById("resultbox").style.letterSpacing = kerning + "px";
 }
+
+
 
 function toggleFontSize() {
   var size = document.getElementById("slider");
@@ -31,9 +36,13 @@ function toggleFontSize() {
 }
 
 function changeSize(){
-	console.log("SIZE");
-	document.querySelector('input').addEventListener('input', e => document.querySelector('input').style.fontSize = e.target.value + 'px');
-}
+	document.querySelector('#slider').addEventListener('input', function(e) {
+    console.log("hi");
+    document.getElementById("resultbox").style.fontSize = this.value + 'px';
+  })
+  }
+
+changeSize();
 
 function toggleColor() {
   var color = document.getElementById("color");
@@ -96,11 +105,32 @@ b.addEventListener('input', function() {
   b_out.value = b.value;
 }, false);
 
+
 function saveText(){
 html2canvas(document.getElementById('resultbox')).then(function(canvas){
 	document.body.appendChild(canvas)
+  // alert("Hi! You can save the text to your computer by right clicking on the texts that show up on the bottom or feel free to screenshot anything you create!");
+
 })
 }
+
+// function notify(){ 
+//   alert("Hello! I am an alert box!");
+// }
+
+
+// const download = document.getElementById('save');
+
+// download.addEventListener('click', function(e) {
+
+//   var link = document.createElement('a');
+//   link.download = 'text.png';
+//   link.href = canvas.toDataURL()
+//   link.click();
+//   link.delete; 
+
+// });
+
 
 // var node = document.getElementById('resultbox');
 // var btn = document.getElementById('save');
@@ -132,50 +162,10 @@ html2canvas(document.getElementById('resultbox')).then(function(canvas){
 // 	}
 // });
 
-// function saveText(){ 
-// 	html2canvas(document.getElementById("resultbox")).then(function(canvas){
-// 	var ajax = new XMLHttpRequest();
-// 	ajax.open("POST" , "save-capture.html" , true);
-// 	ajax.send("image=" + canvas.toDataURL("image/png", 0.9));
-// 	ajax.setRequestHeader("Content-type" , "application/x-www-form-urlencoded ");
-// 	ajax.onreadystatechange = function(){
-// 		if (this.readyState == 4 && this.status == 200 ){
-// 			console.log(this.respondText);
-// 		}
-// 	}
-// 	});
-// }
-
 // function reset(){
 //     document.getElementById("input").removeAttribute('style')
 //   }
 
-// $( "#slider-range-max" ).slider({
-//     range: "max",
-//     min: 10,
-//     max: 70,
-//     value: 10,
-//     slide: function( event, ui ) {
-//       $( "#text" ).css( { fontSize: ui.value} );
-//     }
-//   });
-
-
-// function circularText(txt, radius, classIndex) {
-//   txt = txt.split(""),
-//     classIndex = document.getElementsByClassName("circTxt")[classIndex];
-
-//   var deg = 360 / txt.length,
-//     origin = 0;
-
-//   txt.forEach((ea) => {
-//     ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${ea}</p>`;
-//     classIndex.innerHTML += ea;
-//     origin += deg;
-//   });
-// }
-
-// circularText("this text is in a circle ", 100, 0);
 
 
 
