@@ -54,7 +54,7 @@ button{
 	margin-left:50px;
 	padding:10px;
 	font-size:15px;
-	top:400px;
+	top:600px;
 	left:145px;
 	position:relative;
  /* display:inline-block;*/
@@ -64,16 +64,15 @@ button{
 #resultbox {
 	margin-top:300px;
 	font-size:150px;
-  position:absolute;
+  position:fixed;
   top:100px;
-  text-align:center;
-  position:relative;
-  /*margin-bottom:100px;*/
+  /*margin-bottom:500px;*/
 }
 
 .resultandedit{
 
   margin-bottom:500px;
+
 }
 
 #slider{
